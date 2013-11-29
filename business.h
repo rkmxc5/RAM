@@ -25,7 +25,7 @@ class business
   private:
   string m_name;
   float m_money;
-  string m_inventory[INVENT];
+  product m_inventory[INVENT];
   customer m_people[COP];
   short m_numberInvent;
   short m_numberPeople;
@@ -35,6 +35,11 @@ class business
   //pre: none
   //post: prints the business class to the screen
   void print();
+  
+  //desc:walks through the stores inventory and picks one of the items
+  //pre:choice must be smaller than the size of the array (INVENT)
+  //post: returns the product
+  product getProduct(const int choice) {return(m_inventory[choice])};
   
   //desc: adds a customer to the people array and increases the numberPeople
   //pre: none

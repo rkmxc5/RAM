@@ -18,11 +18,11 @@ using namespace std;
 
 customer::customer()
 {
-  m_name="John Doe";
   for(int i=0;i<BAG;i++)
     m_purchases[i]=" ";
   m_money=(rand()%MOD)+MONEY;
   m_numberp=0;
+  m_happiness=rand()%HAPPY;
 }
 
 customer::customer(const string name, const float money)
@@ -32,21 +32,37 @@ customer::customer(const string name, const float money)
   for(int i=0;i<BAG;i++)
     m_purchases[i]=" ";
   m_numberp=0;
+  m_happiness=rand()%HAPPY;
 }
 
-bool customer::purchase(const string& item)
+bool customer::buySomething(business& shop)
 {
   bool transaction;
-  if(m_money>=COST && m_numberp<BAG)
+  bool buy;
+  int choice;
+  product item;
+  
+  buy=rand()%BUY;
+  if(buy==true)
   {
-    m_purchases[m_numberp]=item;
-    m_money-=COST;
-    m_numberp++;
-    transaction=true;
+    choice=rand()%STOCK+1;
+    item=shop.getProduct(choice)
+    if(m_money>=item.price && m_numberp<BAG)
+    {
+      m_purchases[m_numberp]=item;
+      m_money-=COST;
+      m_numberp++;
+      transaction=true;
+      m_happiness+=BOUGHT;
+    }
+    if(m_money<COST || m_numberp>BAG)
+    {
+      transaction=false;
+      m_happiness-=POOR;
   }
-  if(m_money<COST || m_numberp>BAG)
+  else
     transaction=false;
-    
+  
   return(transaction);
 }
 
