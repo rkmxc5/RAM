@@ -32,7 +32,7 @@ class customer
 {
   private:
   int m_happiness;
-  bool m_inclination;//false is bar, true is comic book shop
+  int m_inclination;//false is bar, true is comic book shop
   product m_purchases[BAG];
   short m_numberp;//number of purchases
   float m_money;
@@ -51,7 +51,7 @@ class customer
   string getName() const {return m_name;}
   float getMoney() const {return m_money;}
   int getHappy() const {return m_happiness;}
-  bool getInclination() const {return m_inclination;}
+  int getInclination() const {return m_inclination;}
   short getNumberp() const {return m_numberp;}
   product getItem(const int spot) const {return m_purchases[spot];}
   
@@ -62,7 +62,7 @@ class customer
   void changeMoney(const float change);
   void makeItem(const product change, const int spot);
   void setName(const float name);
-  void setInclination(const bool inc);
+  void setInclination(const int inc);
   
   //desc:simulates throwing a product at another customer (or self)
   //pre:none

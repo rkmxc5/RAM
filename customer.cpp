@@ -133,7 +133,7 @@ void customer::setName(const float name)
   return;
 }
 
-void customer::setInclination(const bool inc)
+void customer::setInclination(const int inc)
 {
   m_inclination=inc;
   return;
