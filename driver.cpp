@@ -51,7 +51,7 @@ int main()
   {
     getline(fin, name, ',');
     fin >> inclination;
-    springfield_residents[i] = customer(name, inclincation);
+    springfield_residents[i] = customer(name, inclination);
   }
   
   fin.close();
@@ -67,11 +67,11 @@ int main()
   {
     if(springfield_residents[i].getInclination() == -1)
     {
-      store2.enterCustomer(springfield_residents[i]);
+      store2.addCustomer(springfield_residents[i]);
     }
-    else()
+    else
     {
-      store1.enterCustomer(springfield_residents[i]);
+      store1.addCustomer(springfield_residents[i]);
     }
 
   }
@@ -80,8 +80,8 @@ int main()
  do
  {
    //Have both stores make sales for all customers
-   store1.makeAsale();
-   store2.makeAsale();
+   store1.sellStuff();
+   store2.sellStuff();
 
    //Shuffles array
    for(int i=0; i < goodbye_people; i++)
@@ -129,7 +129,7 @@ int main()
      }
    }
 
-   couter++;
+   counter++;
  } while(goodbye_people > 1 && counter < 20);
 
  //tallies up happiness for people who stayed in springfield
@@ -149,14 +149,15 @@ int main()
  {
    cout << "The people who stayed in Springfield are the happiest!" << endl;
    cout << "They have won the Real World Business Adventure!!!" << endl;
-   cout << "-Throws confetti sarcastically-"
+   cout << "-Throws confetti sarcastically-";
  }
  else
  {
    cout << "The people who left Springfield are the happiest!" << endl;
-   cout << "But they're crazy, so who cares?!"
+   cout << "But they're crazy, so who cares?!";
    cout << "They have won the Real World Business Adventure!" << endl;
-   cout << "-Throws confetti sarcastically-"
+   cout << "-Throws confetti sarcastically-";
  }
   return 0;
 }
+
