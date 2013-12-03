@@ -76,16 +76,12 @@ business:: business()
 business:: business(const string name, const float money)
 {
   customer sucker;
-  ifstream f1;
   m_name=name;
   m_money=money;
   m_numberPeople=0;
   m_numberInvent=STOCK;
-  for(int i=0; i<STOCK;i++)
-   // f1>>m_inventory[i]
   for(int i=0;i<COP;i++)
     m_people[i]=sucker;
-  
 }
 
 

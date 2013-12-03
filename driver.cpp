@@ -36,6 +36,8 @@ int main()
   int goodbye_people = NUM_PEOPLE;
   int hold_rand; //holds random number
   customer hold_cust; //holds customer as array is shuffled
+  customer street1[NUM_PEOPLE];//putting the people back into street 
+  customer street2[NUM_PEOPLE];//putting the people back into street
 
   //Create two businesses. Comic book shop and Moe's Bar
   business store1;
@@ -51,7 +53,9 @@ int main()
   {
     getline(fin, name, ',');
     fin >> inclination;
-    springfield_residents[i] = customer(name, inclincation);
+    springfield_residents[i] = customer();
+    springrield_residents[i].setName(name);
+    springrield_residents[i].setInclination(inclination);
   }
   
   fin.close();
@@ -79,11 +83,40 @@ int main()
   
  do
  {
+  //Have customers enter store they prefer
+  for(int i=0; i < NUM_PEOPLE; i++)
+  {
+    if(springfield_residents[i].getInclination() == -1)
+    {
+      store2.enterCustomer(springfield_residents[i]);
+    }
+    else()
+    {
+      store1.enterCustomer(springfield_residents[i]);
+    }
+  }
    //Have both stores make sales for all customers
    store1.makeAsale();
    store2.makeAsale();
 
-   //Shuffles array
+  //customers leave store
+  int spot=0;
+  int place=0;
+  spot=store1.getNumberpeople();
+  place=store2.getNumberpeople();
+  store1.customersLeave(street1, spot);
+  store2.customersLeave(street2, place);
+  for(int i=0; i<spot;i++)
+  { 
+   springfield_residents[i]=street1[i];
+  }
+  place+=spot;
+  for(int i=spot; i<place;i++)
+  { 
+   springfield_residents[i]=street2[i-spot];
+  }
+  
+  //Shuffles array
    for(int i=0; i < goodbye_people; i++)
    {
      hold_rand = rand() % goodbye_people;
@@ -129,7 +162,7 @@ int main()
      }
    }
 
-   couter++;
+   counter++;
  } while(goodbye_people > 1 && counter < 20);
 
  //tallies up happiness for people who stayed in springfield
