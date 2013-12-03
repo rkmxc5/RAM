@@ -4,8 +4,8 @@
 //date:11/3/2013
 //This program is the customer class
 
+#include "product.h"
 #include "customer.h"
-#include "business.h"
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -18,8 +18,6 @@ using namespace std;
 
 customer::customer()
 {
-  for(int i=0;i<BAG;i++)
-    m_purchases[i]=" ";
   m_money=(rand()%MOD)+MONEY;
   m_numberp=0;
   m_happiness=rand()%HAPPY;
@@ -28,83 +26,87 @@ customer::customer()
 void customer::deathBeam(customer& neighbour)
 {
   int spot;
+  int place;
   product item;
   
   if(m_numberp>0)
   {
     spot=rand()%m_numberp;
     item=m_purchases[spot];
-    m_purchases[spot]=0;
-    neighbour.getHappy()-=HIT;
-    getHappy()+=WINHIT;
+    for(int i=spot;spot<m_numberp-1;i++)
+    {
+      place=spot+1;
+      m_purchases[spot]=m_purchases[place];
+    }
+    m_numberp--;
+    neighbour.changeHappy(VICT);
+    changeHappy(WINHIT);
   }
   else
-    getHappy()-=FAILHIT;
+    changeHappy(FAILHIT);
     
   return;
 }
 
+
 void customer::steal(customer& neighbour)
 { 
   int spot;
+  int place;
+  int win;
   product item;
   
   if(neighbour.getNumberp()>0 && m_numberp<BAG)
   {
     spot=rand()%neighbour.getNumberp();
     item=neighbour.getItem(spot);
-    neighbour.getItem(spot)=0;
+    for(int i=spot;i<neighbour.getNumberp()-1;i++)
+    {
+      place=spot+1;
+      neighbour.makeItem(neighbour.getItem(place), spot);
+    }
     m_numberp++;
-    m_inventory[m_numberp]=item;
-    neightbour.getHappy()-=VICT;
-    m_happiness+=FAILHIT;//fail hit was the same amount so I just reused it
+    m_purchases[m_numberp]=item;
+    neighbour.changeHappy(VICT);
+    win=0-FAILHIT;
+    changeHappy(win);//fail hit was the same amount so I just reused it
   }
   else
-    m_happiness-=WINHIT;//same amount as need so just reused
+  {
+    win=0-WINHIT;
+    changeHappy(win);//same amount as need so just reused
+  }
   
   return;
 }
   
 
-customer::customer(const string name, const float money)
-{
-  m_name=name;
-  m_money=money;
-  for(int i=0;i<BAG;i++)
-    m_purchases[i]=" ";
-  m_numberp=0;
-  m_happiness=rand()%HAPPY;
-}
-
-bool customer::buySomething(business& shop)
+bool customer::buySomething(product& item)
 {
   bool transaction;
   bool buy;
-  int choice;
-  product item;
   
   buy=rand()%BUY;
   if(buy==true)
   {
-    choice=rand()%STOCK+1;
-    item=shop.getProduct(choice)
     if(m_money>=item.price && m_numberp<BAG)
     {
       m_purchases[m_numberp]=item;
-      m_money-=COST;
+      m_money-=item.price;
       m_numberp++;
       transaction=true;
       m_happiness+=BOUGHT;
     }
-    if(m_money<COST || m_numberp>BAG)
+    if(m_money<item.price || m_numberp>BAG)
     {
       transaction=false;
       m_happiness-=POOR;
+    }
   }
   else
     transaction=false;
   
-  return(transaction);
+  return transaction;
 }
 
 void customer::changeMoney(const float change)
@@ -113,13 +115,39 @@ void customer::changeMoney(const float change)
   return;
 }
 
-customer& operator << (ostream& stream, customer& person)
+void customer::changeHappy(const int change)
 {
-  cout<<m_name<<" $"<<m_money<<" purchases:";
-  for(int i=0;i<m_numberp;i++)
-    cout<<" "<<m_purchases[i];
+  m_happiness+=change;
+  return;
+}
+
+void customer::makeItem(const product change, const int spot)
+{
+  m_purchases[spot]=change;
+  return;
+}
+
+void customer::setName(const float name)
+{
+  m_name=name;
+  return;
+}
+
+void customer::setInclination(const bool inc)
+{
+  m_inclination=inc;
+  return;
+}
+  
+
+
+ostream& operator << (ostream& stream, customer& person)
+{
+  cout<<person.m_name<<" $"<<person.m_money<<" purchases:";
+  for(int i=0;i<person.getNumberp();i++)
+    cout<<" "<<person.m_purchases[i];
   cout<<endl;
-  return *this;
+  return stream;
 }
 
   

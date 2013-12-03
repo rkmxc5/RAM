@@ -4,6 +4,7 @@
 //date:11/3/2013
 //This program is the business class
 
+#include "product.h"
 #include "business.h"
 #include "customer.h"
 #include <iostream>
@@ -13,6 +14,7 @@
 #include <fstream>
 
 using namespace std;
+
 
 void business::print()
 {
@@ -25,27 +27,40 @@ void business::print()
   
 }
 
-void business::enterCustomer(const customer& sucker)
+void business::addCustomer(customer& sucker)
 {
   m_people[m_numberPeople]=sucker;
   m_numberPeople++;
   return;
 }
 
-void business::makeAsale()
+void business::sellStuff()
 {
-  int pick;
   bool sale;
+  product item;
+  int choice;
   
+  choice=rand()%m_numberInvent;
+  item=m_inventory[choice];
   for(int i=0; i<m_numberPeople;i++)
   {
-    pick=rand()%m_numberInvent;
-    sale=m_people[i].purchase(m_inventory[pick]);
+    sale=m_people[i].buySomething(item);
     if(sale==true)
-      m_money+=COST;
+    {
+      m_money+=item.price;
+    }
   }
   return;
 }
+
+void business::customersLeave(customer street[], const int numberPeople)
+{
+  for(int i=0; i<numberPeople; i++)
+    street[i]=m_people[i];
+  
+  return;
+}
+
 
 business:: business()
 {
@@ -54,8 +69,6 @@ business:: business()
   m_money=0;
   m_numberPeople=0;
   m_numberInvent=STOCK;
-  for(int i=0; i<STOCK;i++)
-    m_inventory[i]=" ";
   for(int i=0;i<COP;i++)
     m_people[i]=sucker; //just used sucker for the default empty spot name just because
 }
@@ -63,19 +76,19 @@ business:: business()
 business:: business(const string name, const float money)
 {
   customer sucker;
-  ifstream f1 ("inventory.txt");
+  ifstream f1;
   m_name=name;
   m_money=money;
   m_numberPeople=0;
   m_numberInvent=STOCK;
   for(int i=0; i<STOCK;i++)
-    f1>>m_inventory[i];
+   // f1>>m_inventory[i]
   for(int i=0;i<COP;i++)
     m_people[i]=sucker;
-  f1.close();
+  
 }
 
-  
+
   
     
     
