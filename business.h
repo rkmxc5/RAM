@@ -33,10 +33,11 @@ class business
   short m_numberPeople;
   
   public:
+  
   //desc: getter for member variables
   //pre:none
   //post:returns member variable
-  void getNumberPeople() const {return m_numberPeople;}
+  int getNumberPeople() const {return m_numberPeople;}
   
   //desc: prints the business class to the screen
   //pre: none

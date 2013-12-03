@@ -61,7 +61,7 @@ class customer
   void changeHappy(const int change);
   void changeMoney(const float change);
   void makeItem(const product change, const int spot);
-  void setName(const float name);
+  void setName(const string name);
   void setInclination(const int inc);
   
   //desc:simulates throwing a product at another customer (or self)

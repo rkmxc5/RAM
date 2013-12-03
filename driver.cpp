@@ -56,7 +56,6 @@ int main()
     springfield_residents[i] = customer();
     springfield_residents[i].setName(name);
     springfield_residents[i].setInclination(inclination);
-    springfield_residents[i] = customer(name, inclination);
   }
   
   fin.close();
@@ -67,6 +66,9 @@ int main()
     cout << springfield_residents[i];
   }
 
+  
+ do
+ {
   //Have customers enter store they prefer
   for(int i=0; i < NUM_PEOPLE; i++)
   {
@@ -78,23 +80,6 @@ int main()
     {
       store1.addCustomer(springfield_residents[i]);
     }
-
-  }
-
-  
- do
- {
-  //Have customers enter store they prefer
-  for(int i=0; i < NUM_PEOPLE; i++)
-  {
-    if(springfield_residents[i].getInclination() == -1)
-    {
-      store2.enterCustomer(springfield_residents[i]);
-    }
-    else()
-    {
-      store1.enterCustomer(springfield_residents[i]);
-    }
   }
    //Have both stores make sales for all customers
    store1.sellStuff();
@@ -103,8 +88,8 @@ int main()
   //customers leave store
   int spot=0;
   int place=0;
-  spot=store1.getNumberpeople();
-  place=store2.getNumberpeople();
+  spot=store1.getNumberPeople();
+  place=store2.getNumberPeople();
   store1.customersLeave(street1, spot);
   store2.customersLeave(street2, place);
   for(int i=0; i<spot;i++)

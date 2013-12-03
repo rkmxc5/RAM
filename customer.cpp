@@ -127,7 +127,7 @@ void customer::makeItem(const product change, const int spot)
   return;
 }
 
-void customer::setName(const float name)
+void customer::setName(const string name)
 {
   m_name=name;
   return;
