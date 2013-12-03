@@ -1,8 +1,8 @@
-//Name: Mathew Pollard
+//Names: Mathew Pollard, Rachel Miller, Andrea Moore
 //Class:cs 53
 //section: C
 //date:11/3/2013
-//This program is the business class
+//Filename: business.cpp
 
 #include "product.h"
 #include "business.h"
