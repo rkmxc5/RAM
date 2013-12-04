@@ -29,6 +29,8 @@ int main()
   //Variable declarations
   ifstream fin;
   string name;
+  string product_name;
+  float price;
   int counter = 0; //counts # of times loop has been run
   int stay_happy = 0; //happiness of people who stay in Sprinfield
   int leave_happy =0; //happiness of people who leave Springfield
@@ -44,7 +46,28 @@ int main()
   store1 = business("Comic Book Shop", 699.00);
   business store2;
   store2 = business("Moe's Bar", 450.25);
-
+  
+  //Access store inventory for Moes Bar
+  fin.open("moes.txt");
+  for(int i=0; i < 6;i++)
+  {
+    getline(fin, product_name, ',');
+    fin>>price;
+    
+    store2.setInvent(product_name,price,i);
+  }
+  fin.close();
+  
+  //Access store inventory for Comic Book Shop
+  fin.open("comics.txt");
+  for(int i=0; i < 6;i++)
+  {
+    getline(fin, product_name, ',');
+    fin>>price;
+    store1.setInvent(product_name,price,i);
+  }
+  fin.close();
+  
   //Create array of customers and fill from text file
   customer springfield_residents[NUM_PEOPLE];
   fin.open("people.txt");
@@ -141,22 +164,27 @@ int main()
        hold_cust = springfield_residents[i];
        springfield_residents[i] = springfield_residents[goodbye_people-1];
        springfield_residents[goodbye_people-1] = hold_cust;
+       cout << springfield_residents[goodbye_people-1].getName();
+       cout << " has gone bonkers and have been shipped to ";
+       cout << " Shelbyville's House of desperation for your protection." << endl;
        goodbye_people--;
        i--;
-       cout << springfield_residents[i].getName();
-       cout << " has gone bonkers and have been shipped to ";
-       cout << " Shelbyville's House of crazies for your protection." << endl;
      }
-    }
-    for(int i=0; i<goodbye_people;i++)
-    {
+     else
      {
        cout << springfield_residents[i].getName() << " isn't crazy!";
        cout << endl;
      }
     }
    
-
+   cout << "=========================================================" << endl;
+   cout << "=========================================================" << endl;
+  
+  //Outputs array after each round of interactions  
+  for(int i=0; i < NUM_PEOPLE; i++)
+  {
+    cout << springfield_residents[i];
+  }
    counter++;
  } while(goodbye_people > 1 && counter < 20);
 
@@ -177,14 +205,14 @@ int main()
  {
    cout << "The people who stayed in Springfield are the happiest!" << endl;
    cout << "They have won the Real World Business Adventure!!!" << endl;
-   cout << "-Throws confetti sarcastically-";
+   cout << "-Throws confetti sarcastically-" << endl;
  }
  else
  {
    cout << "The people who left Springfield are the happiest!" << endl;
    cout << "But they're crazy, so who cares?! ";
    cout << "They have won the Real World Business Adventure!" << endl;
-   cout << "-Throws confetti sarcastically-";
+   cout << "-Throws confetti sarcastically-" << endl;
  }
   return 0;
 }

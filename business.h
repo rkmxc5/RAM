@@ -44,6 +44,7 @@ class business
   //post:changes the value the member variable
   void setNumberPeople(const int p);
   void setMoney(const float m);
+  void setInvent(const string nam,const float pric,const int i);
   
   //desc: prints the business class to the screen
   //pre: none

@@ -13,10 +13,5 @@ struct product
   //post: allows for use of << operator
   friend ostream& operator << (ostream& stream, product& p);
   
-   //desc: overloading of insertion operator
-  //pre:none
-  //post: allows for use of >> operator
-  //friend ifstream& operator >> (ifstream& stream, product& p);
-  
 };
 #endif

@@ -12,7 +12,4 @@ ostream& operator << (ostream& stream, product& p)
   return stream;
 }
 
-/*ifstream& operator >> (ifstream& stream, product& p)
-{
-  string stream;
-  g*/
+

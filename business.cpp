@@ -48,6 +48,7 @@ void business::sellStuff()
     if(sale==true)
     {
       m_money+=item.price;
+      cout<<m_people[i].getName()<<" has bought "<<item<<endl;
     }
   }
   return;
@@ -70,6 +71,13 @@ void business::setNumberPeople(const int p)
 void business::setMoney(const float m)
 {
   m_money=m;
+  return;
+}
+
+void business::setInvent(const string nam,const float pric,const int i)
+{
+  m_inventory[i].price=pric;
+  m_inventory[i].name=nam;
   return;
 }
 
