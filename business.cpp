@@ -30,6 +30,8 @@ void business::print()
 void business::addCustomer(customer& sucker)
 {
   m_people[m_numberPeople]=sucker;
+  for(int i=0; i<m_people[m_numberPeople].getNumberp();i++)
+    m_people[m_numberPeople].makeItem(sucker.getItem(i),i);
   m_numberPeople++;
   return;
 }
@@ -39,11 +41,11 @@ void business::sellStuff()
   bool sale;
   product item;
   int choice;
-  
-  choice=rand()%m_numberInvent;
-  item=m_inventory[choice];
+ 
   for(int i=0; i<m_numberPeople;i++)
   {
+    choice=rand()%m_numberInvent;
+    item=m_inventory[choice];
     sale=m_people[i].buySomething(item);
     if(sale==true)
     {

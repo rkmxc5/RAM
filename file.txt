@@ -1,0 +1,661 @@
+beer($4)
+
+
+barstool($10)
+
+
+shot-of-whiskey($6)
+
+
+complete-floor($100)
+
+
+peanut($0.1)
+
+
+pickled-egg($1)
+
+
+dartgun($20)
+
+comic-book1($4)
+
+
+comic-book2($8)
+
+
+comic-book3($10)
+
+
+action-figure($10)
+
+ 
+40-sided-die($20)
+
+
+cheeto-value-pak($15)
+
+
+limited-release-RadioMan#1($100)
+
+Homer With Happiness: 21 $57 purchases:0
+
+Lenny With Happiness: 58 $212 purchases:0
+
+Milhouse With Happiness: 100 $49 purchases:0
+
+Bart With Happiness: 73 $250 purchases:0
+
+Edna Krabappel With Happiness: 67 $49 purchases:0
+
+Otto Mann With Happiness: 90 $78 purchases:0
+
+Ned Flanders With Happiness: 13 $143 purchases:0
+
+Rod Flanders With Happiness: 49 $175 purchases:0
+
+Marge With Happiness: 44 $45 purchases:0
+
+Krusty With Happiness: 76 $64 purchases:0
+
+Disco Stu With Happiness: 77 $129 purchases:0
+
+Dolph With Happiness: 16 $24 purchases:0
+
+Dr. Hibbert With Happiness: 100 $23 purchases:0
+
+Barney With Happiness: 67 $184 purchases:0
+
+Rev. Lovejoy With Happiness: 56 $166 purchases:0
+
+Martin With Happiness: 36 $177 purchases:0
+
+Smihers With Happiness: 10 $37 purchases:0
+
+Groundskeeper Willie With Happiness: 28 $225 purchases:0
+
+Ralph Wiggum With Happiness: 57 $220 purchases:0
+
+Apu Nahasapeemapetilon With Happiness: 54 $167 purchases:0
+
+Milhouse has bought comic-book1($4)
+
+
+Otto Mann has bought comic-book1($4)
+
+
+Disco Stu has bought 
+action-figure($10)
+
+
+Smihers has bought comic-book1($4)
+
+
+Lenny has bought 
+peanut($0.1)
+
+
+Groundskeeper Willie has bought 
+peanut($0.1)
+
+
+Ralph Wiggum stole a
+action-figure($10)
+ from 
+Disco Stu
+Otto Mann threw a comic-book1($4)
+ at 
+Barney
+
+Smihers threw a comic-book1($4)
+ at 
+Apu Nahasapeemapetilon
+
+Lenny threw a 
+peanut($0.1)
+ at 
+Rod Flanders
+
+Bart stole acomic-book1($4)
+ from 
+Milhouse
+Rev. Lovejoy threw a 
+complete-floor($100)
+ at 
+Ned Flanders
+
+Ralph Wiggum isn't crazy!
+
+Marge isn't crazy!
+
+Otto Mann has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Milhouse isn't crazy!
+
+Smihers isn't crazy!
+
+Lenny isn't crazy!
+
+Krusty isn't crazy!
+
+Martin isn't crazy!
+
+Disco Stu isn't crazy!
+Homer has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Groundskeeper Willie isn't crazy!
+
+Apu Nahasapeemapetilon isn't crazy!
+
+Rod Flanders has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Dr. Hibbert isn't crazy!
+
+Ned Flanders has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Rev. Lovejoy isn't crazy!
+
+Barney isn't crazy!
+
+Bart has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Dolph isn't crazy!
+
+Edna Krabappel isn't crazy!
+=========================================================
+=========================================================
+
+Ralph Wiggum With Happiness: 82 $220 purchases:1
+ 
+action-figure($10)
+
+
+Marge With Happiness: 29 $45 purchases:0
+
+Milhouse With Happiness: 70 $45 purchases:0
+
+Smihers With Happiness: 30 $33 purchases:0
+
+Lenny With Happiness: 78 $211.9 purchases:0
+
+Krusty With Happiness: 41 $64 purchases:0
+
+Martin With Happiness: 31 $177 purchases:0
+
+Disco Stu With Happiness: 47 $119 purchases:0
+
+Groundskeeper Willie With Happiness: 38 $224.9 purchases:1
+ 
+peanut($0.1)
+
+
+Apu Nahasapeemapetilon With Happiness: 29 $167 purchases:0
+
+Dr. Hibbert With Happiness: 75 $23 purchases:0
+
+Rev. Lovejoy With Happiness: 66 $66 purchases:0
+
+Barney With Happiness: 22 $184 purchases:0
+
+Dolph With Happiness: 11 $24 purchases:0
+
+Edna Krabappel With Happiness: 62 $49 purchases:0
+
+Martin has bought 
+comic-book3($10)
+
+
+Disco Stu has bought 
+cheeto-value-pak($15)
+
+
+Krusty has bought 
+dartgun($20)
+
+
+Groundskeeper Willie has bought 
+shot-of-whiskey($6)
+
+
+Dr. Hibbert has bought 
+barstool($10)
+
+
+Krusty stole a
+shot-of-whiskey($6)
+ from 
+Groundskeeper Willie
+Dr. Hibbert stole a
+barstool($10)
+ from 
+Dr. Hibbert
+Ralph Wiggum threw a 
+action-figure($10)
+ at 
+Groundskeeper Willie
+
+Martin isn't crazy!
+
+Milhouse isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+
+Krusty isn't crazy!
+
+Dolph has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Lenny isn't crazy!
+
+Edna Krabappel isn't crazy!
+
+Disco Stu isn't crazy!
+
+Barney isn't crazy!
+
+Apu Nahasapeemapetilon has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Marge has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Ralph Wiggum isn't crazy!
+
+Dr. Hibbert has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Groundskeeper Willie has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Smihers has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+=========================================================
+=========================================================
+
+Martin With Happiness: 41 $167 purchases:1
+ 
+comic-book3($10)
+
+
+Milhouse With Happiness: 45 $45 purchases:0
+
+Rev. Lovejoy With Happiness: 41 $66 purchases:0
+
+Krusty With Happiness: 81 $44 purchases:2
+ 
+dartgun($20)
+
+ 
+shot-of-whiskey($6)
+
+
+Lenny With Happiness: 53 $211.9 purchases:0
+
+Edna Krabappel With Happiness: 47 $49 purchases:0
+
+Disco Stu With Happiness: 57 $104 purchases:1
+ 
+cheeto-value-pak($15)
+
+
+Barney With Happiness: 17 $184 purchases:0
+
+Ralph Wiggum With Happiness: 87 $220 purchases:0
+
+Rev. Lovejoy has bought beer($4)
+
+
+Lenny has bought 
+barstool($10)
+
+
+Ralph Wiggum stole a
+cheeto-value-pak($15)
+ from 
+Disco Stu
+Martin threw a 
+comic-book3($10)
+ at 
+Rev. Lovejoy
+
+Krusty threw a 
+shot-of-whiskey($6)
+ at 
+Ralph Wiggum
+
+Rev. Lovejoy stole a
+complete-floor($100)
+ from 
+Barney
+Ralph Wiggum has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Barney has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Lenny isn't crazy!
+
+Disco Stu isn't crazy!
+
+Edna Krabappel isn't crazy!
+
+Martin isn't crazy!
+
+Krusty isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+
+Milhouse isn't crazy!
+=========================================================
+=========================================================
+
+Lenny With Happiness: 63 $201.9 purchases:1
+ 
+barstool($10)
+
+
+Disco Stu With Happiness: 32 $104 purchases:0
+
+Edna Krabappel With Happiness: 42 $49 purchases:0
+
+Martin With Happiness: 46 $167 purchases:0
+
+Krusty With Happiness: 76 $44 purchases:1
+ 
+dartgun($20)
+
+
+Rev. Lovejoy With Happiness: 61 $62 purchases:2
+ beer($4)
+
+ 
+complete-floor($100)
+
+
+Milhouse With Happiness: 20 $45 purchases:0
+
+Krusty stole a
+dartgun($20)
+ from 
+Krusty
+Edna Krabappel stole a
+dartgun($20)
+ from 
+Krusty
+Martin isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+
+Krusty isn't crazy!
+
+Disco Stu has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Lenny isn't crazy!
+
+Milhouse isn't crazy!
+
+Edna Krabappel isn't crazy!
+=========================================================
+=========================================================
+
+Martin With Happiness: 21 $167 purchases:0
+
+Rev. Lovejoy With Happiness: 56 $62 purchases:2
+ beer($4)
+
+ 
+complete-floor($100)
+
+
+Krusty With Happiness: 61 $44 purchases:0
+
+Lenny With Happiness: 58 $201.9 purchases:1
+ 
+barstool($10)
+
+
+Milhouse With Happiness: 15 $45 purchases:0
+
+Edna Krabappel With Happiness: 67 $49 purchases:1
+ 
+dartgun($20)
+
+
+Martin has bought  
+40-sided-die($20)
+
+
+Krusty has bought 
+shot-of-whiskey($6)
+
+
+Lenny has bought 
+complete-floor($100)
+
+
+Edna Krabappel has bought 
+dartgun($20)
+
+
+Lenny stole abeer($4)
+ from 
+Rev. Lovejoy
+Martin threw a  
+40-sided-die($20)
+ at 
+Krusty
+
+Edna Krabappel stole a
+barstool($10)
+ from 
+Lenny
+Rev. Lovejoy stole a
+complete-floor($100)
+ from 
+Lenny
+Krusty threw a 
+shot-of-whiskey($6)
+ at 
+Milhouse
+
+Lenny isn't crazy!
+
+Martin isn't crazy!
+
+Edna Krabappel has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Krusty isn't crazy!
+
+Milhouse has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Rev. Lovejoy isn't crazy!
+=========================================================
+=========================================================
+
+Lenny With Happiness: 58 $101.9 purchases:1
+ 
+complete-floor($100)
+
+
+Martin With Happiness: 41 $147 purchases:0
+
+Krusty With Happiness: 61 $38 purchases:0
+
+Rev. Lovejoy With Happiness: 51 $62 purchases:2
+ 
+complete-floor($100)
+
+ 
+complete-floor($100)
+
+
+Krusty has bought 
+barstool($10)
+
+
+Rev. Lovejoy has bought 
+pickled-egg($1)
+
+
+Lenny stole a
+complete-floor($100)
+ from 
+Lenny
+Rev. Lovejoy stole a
+complete-floor($100)
+ from 
+Rev. Lovejoy
+Krusty stole a
+barstool($10)
+ from 
+Krusty
+Lenny isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+
+Krusty isn't crazy!
+
+Martin isn't crazy!
+=========================================================
+=========================================================
+
+Lenny With Happiness: 63 $101.9 purchases:1
+ 
+complete-floor($100)
+
+
+Rev. Lovejoy With Happiness: 71 $61 purchases:3
+ 
+complete-floor($100)
+
+ 
+complete-floor($100)
+
+ 
+pickled-egg($1)
+
+
+Krusty With Happiness: 81 $28 purchases:1
+ 
+barstool($10)
+
+
+Martin With Happiness: 16 $147 purchases:0
+
+Lenny has bought 
+barstool($10)
+
+
+Krusty stole a
+barstool($10)
+ from 
+Krusty
+Lenny stole a
+complete-floor($100)
+ from 
+Lenny
+Rev. Lovejoy stole a
+complete-floor($100)
+ from 
+Rev. Lovejoy
+Krusty isn't crazy!
+
+Martin isn't crazy!
+
+Lenny isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+=========================================================
+=========================================================
+
+Krusty With Happiness: 86 $28 purchases:1
+ 
+barstool($10)
+
+
+Martin With Happiness: 11 $147 purchases:0
+
+Lenny With Happiness: 83 $91.9 purchases:2
+ 
+barstool($10)
+
+ 
+barstool($10)
+
+
+Rev. Lovejoy With Happiness: 76 $61 purchases:3
+ 
+complete-floor($100)
+
+ 
+pickled-egg($1)
+
+ 
+pickled-egg($1)
+
+
+Lenny has bought 
+dartgun($20)
+
+
+Rev. Lovejoy stole a
+dartgun($20)
+ from 
+Lenny
+Krusty stole a
+pickled-egg($1)
+ from 
+Rev. Lovejoy
+Lenny stole a
+pickled-egg($1)
+ from 
+Krusty
+Martin has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Lenny has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+
+Krusty isn't crazy!
+
+Rev. Lovejoy isn't crazy!
+=========================================================
+=========================================================
+
+Krusty With Happiness: 81 $28 purchases:1
+ 
+barstool($10)
+
+
+Rev. Lovejoy With Happiness: 81 $61 purchases:3
+ 
+complete-floor($100)
+
+ 
+pickled-egg($1)
+
+ 
+pickled-egg($1)
+
+
+Rev. Lovejoy has bought 
+shot-of-whiskey($6)
+
+
+Rev. Lovejoy stole a
+pickled-egg($1)
+ from 
+Rev. Lovejoy
+Krusty stole a
+complete-floor($100)
+ from 
+Rev. Lovejoy
+Rev. Lovejoy isn't crazy!
+
+Krusty has gone bonkers and have been shipped to  Shelbyville's House of desperation for your protection.
+=========================================================
+=========================================================
+
+Rev. Lovejoy With Happiness: 81 $55 purchases:3
+ 
+pickled-egg($1)
+
+ 
+pickled-egg($1)
+
+ 
+shot-of-whiskey($6)
+
+The people who left Springfield are the happiest!
+But they're crazy, so who cares?! They have won the Real World Business Adventure!
+-Throws confetti sarcastically-

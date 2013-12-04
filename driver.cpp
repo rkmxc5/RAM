@@ -24,7 +24,9 @@ const int NUM_PEOPLE = 20;
 int main()
 {
   //seed random number generator
+  //srand(time(NULL));
   srand(1);
+  
 
   //Variable declarations
   ifstream fin;
@@ -49,7 +51,7 @@ int main()
   
   //Access store inventory for Moes Bar
   fin.open("moes.txt");
-  for(int i=0; i < 6;i++)
+  for(int i=0; i < STOCK;i++)
   {
     getline(fin, product_name, ',');
     fin>>price;
@@ -58,15 +60,29 @@ int main()
   }
   fin.close();
   
+  //OUTING inventory
+  
+  for(int i=0; i < STOCK;i++)
+  {
+    product item=store2.getProduct(i);
+    cout << item << endl;
+  }
+  
   //Access store inventory for Comic Book Shop
   fin.open("comics.txt");
-  for(int i=0; i < 6;i++)
+  for(int i=0; i < STOCK;i++)
   {
     getline(fin, product_name, ',');
     fin>>price;
     store1.setInvent(product_name,price,i);
   }
   fin.close();
+  
+   for(int i=0; i < STOCK;i++)
+  {
+    product item=store1.getProduct(i);
+    cout << item << endl;
+  }
   
   //Create array of customers and fill from text file
   customer springfield_residents[NUM_PEOPLE];
@@ -158,6 +174,7 @@ int main()
    //Goes through array and removes them if happiness is below 10 and above 90
    for(int i=0; i < goodbye_people; i++)
    {
+     
      if(springfield_residents[i].getHappy() < 10 || 
      	springfield_residents[i].getHappy() > 90)
      {
@@ -181,7 +198,7 @@ int main()
    cout << "=========================================================" << endl;
   
   //Outputs array after each round of interactions  
-  for(int i=0; i < NUM_PEOPLE; i++)
+  for(int i=0; i < goodbye_people; i++)
   {
     cout << springfield_residents[i];
   }

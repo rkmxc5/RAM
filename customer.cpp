@@ -43,6 +43,7 @@ void customer::deathBeam(customer& neighbour)
     neighbour.changeHappy(VICT);
     changeHappy(WINHIT);
     cout<<m_name<<" threw a " <<item<<" at "<<neighbour.getName() << endl;
+    
   }
   else
     changeHappy(FAILHIT);
@@ -67,12 +68,16 @@ void customer::steal(customer& neighbour)
       place=spot+1;
       neighbour.makeItem(neighbour.getItem(place), spot);
     }
-    m_numberp++;
     m_purchases[m_numberp]=item;
+    m_numberp +=1;
+    neighbour.changeNumberp(-1);
+    
+   
     neighbour.changeHappy(VICT);
     win=0-FAILHIT;
     changeHappy(win);//fail hit was the same amount so I just reused it
     cout<<m_name<<" stole a" <<item<<" from "<<neighbour.getName();
+     
   }
   else
   {
@@ -141,16 +146,24 @@ void customer::setInclination(const int inc)
   m_inclination=inc;
   return;
 }
-  
+
+void customer::changeNumberp(const float change)
+{
+  m_numberp+=change;
+  return;
+}
 
 
 ostream& operator << (ostream& stream, customer& person)
 {
   cout<<person.m_name<<" With Happiness: "<<person.getHappy()
       <<" $"<<person.m_money<<" purchases:";
+  cout.flush();
+  cout << person.getNumberp() << endl;
   for(int i=0;i<person.getNumberp();i++)
-    cout<<" "<<person.m_purchases[i];
-  cout<<endl;
+  {
+    cout<<" "<<person.m_purchases[i] << endl;
+  }
   return stream;
 }
 

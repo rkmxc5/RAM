@@ -63,6 +63,7 @@ class customer
   void makeItem(const product change, const int spot);
   void setName(const string name);
   void setInclination(const int inc);
+  void changeNumberp(const float change);
   
   //desc:simulates throwing a product at another customer (or self)
   //pre:none
