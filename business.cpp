@@ -50,7 +50,7 @@ void business::sellStuff()
     if(sale==true)
     {
       m_money+=item.price;
-      cout<<m_people[i].getName()<<" has bought "<<item<<endl;
+      //cout<<m_people[i].getName()<<" has bought "<<item<<endl;
     }
   }
   return;

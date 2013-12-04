@@ -1,5 +1,5 @@
 //------------------------------driver.cpp-------------------------------------
-// Programmer: Andrea Moore
+// Programmer: Andrea Moore, Rachel Miller, Mat Pollard 
 // Class: CSc53 Section C
 // Duet Date: 12/04/13
 //-----------------------------------------------------------------------------
@@ -24,8 +24,7 @@ const int NUM_PEOPLE = 20;
 int main()
 {
   //seed random number generator
-  //srand(time(NULL));
-  srand(1);
+  srand(time(NULL));
   
 
   //Variable declarations
@@ -34,8 +33,6 @@ int main()
   string product_name;
   float price;
   int counter = 0; //counts # of times loop has been run
-  int stay_happy = 0; //happiness of people who stay in Sprinfield
-  int leave_happy =0; //happiness of people who leave Springfield
   int inclination; //stores the inclination of the customers
   int goodbye_people = NUM_PEOPLE;
   int hold_rand; //holds random number
@@ -60,29 +57,16 @@ int main()
   }
   fin.close();
   
-  //OUTING inventory
-  
-  for(int i=0; i < STOCK;i++)
-  {
-    product item=store2.getProduct(i);
-    cout << item << endl;
-  }
-  
   //Access store inventory for Comic Book Shop
   fin.open("comics.txt");
   for(int i=0; i < STOCK;i++)
   {
     getline(fin, product_name, ',');
     fin>>price;
+    fin.ignore(500, '\n');
     store1.setInvent(product_name,price,i);
   }
   fin.close();
-  
-   for(int i=0; i < STOCK;i++)
-  {
-    product item=store1.getProduct(i);
-    cout << item << endl;
-  }
   
   //Create array of customers and fill from text file
   customer springfield_residents[NUM_PEOPLE];
@@ -92,6 +76,7 @@ int main()
   {
     getline(fin, name, ',');
     fin >> inclination;
+    fin.ignore(500, '\n');
     springfield_residents[i] = customer();
     springfield_residents[i].setName(name);
     springfield_residents[i].setInclination(inclination);
@@ -198,37 +183,44 @@ int main()
    cout << "=========================================================" << endl;
   
   //Outputs array after each round of interactions  
-  for(int i=0; i < goodbye_people; i++)
+  /*for(int i=0; i < goodbye_people; i++)
   {
     cout << springfield_residents[i];
-  }
+  }*/
    counter++;
  } while(goodbye_people > 1 && counter < 20);
 
- //tallies up happiness for people who stayed in springfield
- for(int i=0; i < goodbye_people; i++)
- {
-   stay_happy += springfield_residents[i].getHappy();
- }
-
- //tallies up happiness for people who left springfield
- for(int i=goodbye_people; i < NUM_PEOPLE; i++)
- {
-   leave_happy += springfield_residents[i].getHappy();
- }
-
+ //figuring out if moes bar wins or comic book shop wins
+ int happymoe=0;
+ int happycomic=0;
+ for(int i=0; i < NUM_PEOPLE; i++)
+  {
+    if(springfield_residents[i].getInclination() == -1)
+      happymoe+=springfield_residents[i].getHappy();
+    else
+      happycomic+=springfield_residents[i].getHappy();
+  }
+ 
+ //last people standing
+ for(int i=0; i<goodbye_people;i++)
+  cout<<"the winner is "<<springfield_residents[i]<<" yay!"<<endl;
+  
  //Output results of which group has the highest total happiness
- if(stay_happy > leave_happy)
+ if(happymoe > happycomic)
  {
-   cout << "The people who stayed in Springfield are the happiest!" << endl;
+   cout << "Moe's bar has the happiest customers around..." << endl
+        << "Therefore, drunkards shall rule the world eternally." << endl;
    cout << "They have won the Real World Business Adventure!!!" << endl;
+   cout << "Comic Book Fans shall now lose most bar fights." << endl;
    cout << "-Throws confetti sarcastically-" << endl;
  }
  else
  {
-   cout << "The people who left Springfield are the happiest!" << endl;
-   cout << "But they're crazy, so who cares?! ";
+   cout << "Comic Book Guy has the happiest customers around!" << endl;
+   cout << "Every person now has the capacity for +5 Charisma, and familiars"
+        <<  " that eat the socks of the drunk." << endl;
    cout << "They have won the Real World Business Adventure!" << endl;
+   cout << "Moe's customers eternally search for their socks." << endl;
    cout << "-Throws confetti sarcastically-" << endl;
  }
   return 0;
