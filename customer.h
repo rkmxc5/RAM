@@ -68,7 +68,7 @@ class customer
   //desc:simulates throwing a product at another customer (or self)
   //pre:none
   //post:removes the item from inventory and changes happiness based on success
-  void deathBeam(customer& neighbour);//made it deathBeam because throw is taken and because
+  void deathBeam(customer& neighbour);//made it deathBeam because throw is take
   
   //desc: simulates stealing a product from another customer
   //pre:none

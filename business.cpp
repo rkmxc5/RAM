@@ -91,7 +91,7 @@ business:: business()
   m_numberPeople=0;
   m_numberInvent=STOCK;
   for(int i=0;i<COP;i++)
-    m_people[i]=sucker; //just used sucker for the default empty spot name just because
+    m_people[i]=sucker; 
 }
 
 business:: business(const string name, const float money)
