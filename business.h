@@ -55,6 +55,7 @@ class business
   //pre:choice must be smaller than the size of the array (INVENT)
   //post: returns the product
   product getProduct(const int choice) {return(m_inventory[choice]);}
+  float getMoney() const {return m_money;}
   
   //desc: adds a customer to the people array and increases the numberPeople
   //pre: none
