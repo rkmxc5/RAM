@@ -24,7 +24,7 @@ const int NUM_PEOPLE = 20;
 int main()
 {
   //seed random number generator
-  srand(time(NULL));
+  srand(1);
 
   //Variable declarations
   ifstream fin;
@@ -69,8 +69,13 @@ int main()
   
  do
  {
+  if(counter>=1)
+  {
+    store1.setNumberPeople(0);
+    store2.setNumberPeople(0);
+  }
   //Have customers enter store they prefer
-  for(int i=0; i < NUM_PEOPLE; i++)
+  for(int i=0; i < goodbye_people; i++)
   {
     if(springfield_residents[i].getInclination() == -1)
     {
@@ -81,6 +86,7 @@ int main()
       store1.addCustomer(springfield_residents[i]);
     }
   }
+
    //Have both stores make sales for all customers
    store1.sellStuff();
    store2.sellStuff();
@@ -93,7 +99,7 @@ int main()
   store1.customersLeave(street1, spot);
   store2.customersLeave(street2, place);
   for(int i=0; i<spot;i++)
-  { 
+  {  
    springfield_residents[i]=street1[i];
   }
   place+=spot;
@@ -101,7 +107,7 @@ int main()
   { 
    springfield_residents[i]=street2[i-spot];
   }
-  
+
   //Shuffles array
    for(int i=0; i < goodbye_people; i++)
    {
@@ -110,7 +116,7 @@ int main()
      springfield_residents[i] = springfield_residents[hold_rand];
      springfield_residents[hold_rand] = hold_cust;
    }
-
+  
    //Make the people interact
    for(int i=0; i < goodbye_people; i++)
    {
@@ -133,20 +139,23 @@ int main()
      	springfield_residents[i].getHappy() > 90)
      {
        hold_cust = springfield_residents[i];
-       springfield_residents[i] = springfield_residents[goodbye_people];
-       springfield_residents[goodbye_people] = hold_cust;
+       springfield_residents[i] = springfield_residents[goodbye_people-1];
+       springfield_residents[goodbye_people-1] = hold_cust;
        goodbye_people--;
        i--;
        cout << springfield_residents[i].getName();
        cout << " has gone bonkers and have been shipped to ";
        cout << " Shelbyville's House of crazies for your protection." << endl;
      }
-     else
+    }
+    for(int i=0; i<goodbye_people;i++)
+    {
      {
-       cout << "Hey! " << springfield_residents[i].getName() << " isn't crazy!";
+       cout << springfield_residents[i].getName() << " isn't crazy!";
        cout << endl;
      }
-   }
+    }
+   
 
    counter++;
  } while(goodbye_people > 1 && counter < 20);
@@ -173,7 +182,7 @@ int main()
  else
  {
    cout << "The people who left Springfield are the happiest!" << endl;
-   cout << "But they're crazy, so who cares?!";
+   cout << "But they're crazy, so who cares?! ";
    cout << "They have won the Real World Business Adventure!" << endl;
    cout << "-Throws confetti sarcastically-";
  }

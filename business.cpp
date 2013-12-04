@@ -61,6 +61,17 @@ void business::customersLeave(customer street[], const int numberPeople)
   return;
 }
 
+void business::setNumberPeople(const int p)
+{
+  m_numberPeople=p;
+  return;
+}
+
+void business::setMoney(const float m)
+{
+  m_money=m;
+  return;
+}
 
 business:: business()
 {

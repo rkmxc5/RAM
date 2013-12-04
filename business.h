@@ -39,6 +39,12 @@ class business
   //post:returns member variable
   int getNumberPeople() const {return m_numberPeople;}
   
+  //desc: mutators for member variables
+  //pre:none
+  //post:changes the value the member variable
+  void setNumberPeople(const int p);
+  void setMoney(const float m);
+  
   //desc: prints the business class to the screen
   //pre: none
   //post: prints the business class to the screen

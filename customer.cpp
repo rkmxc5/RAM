@@ -31,11 +31,12 @@ void customer::deathBeam(customer& neighbour)
   
   if(m_numberp>0)
   {
+    
     spot=rand()%m_numberp;
     item=m_purchases[spot];
-    for(int i=spot;spot<m_numberp-1;i++)
+    for(int i=spot; i<m_numberp-1;i++)
     {
-      place=spot+1;
+      place=i+1;
       m_purchases[spot]=m_purchases[place];
     }
     m_numberp--;
